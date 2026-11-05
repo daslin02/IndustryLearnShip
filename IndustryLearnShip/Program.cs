@@ -10,6 +10,8 @@ namespace IndustryLearnShip
     {
         static void Main(string[] args)
         {
+            Menu.MenuRunner MR = new Menu.MenuRunner();
+            MR.Run();
         }
     }
 }
