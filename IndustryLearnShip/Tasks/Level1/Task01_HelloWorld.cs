@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
+    [Common.TaskInfoAttribute("Level-1")]
     internal class Task01_HelloWorld : Common.ITask
     {
-        string ITask.Title => throw new NotImplementedException();
+        string ITask.Title => "Hellow world";
 
-        string ITask.Description => throw new NotImplementedException();
+        string ITask.Description => "Print in console Hello World And current Time";
 
-        string[] ITask.Requirements => throw new NotImplementedException();
+        string[] ITask.Requirements => new[] {"Print Hello world" , "PrintTime"};
 
         void ITask.Run()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Hello world Time: {DateTime.Now}");
         }
     }
 }
