@@ -13,13 +13,13 @@ namespace IndustryLearnShip.Tasks.Level1
     {
         string ITask.Title => "Hellow world";
 
-        string ITask.Description => "Print in console Hello World And current Time";
+        string ITask.Description => "выводит ";
 
-        string[] ITask.Requirements => new[] {"Print Hello world" , "PrintTime"};
+        string[] ITask.Requirements => new[] {"Вывод Hello world" , "Вывод текущего времени"};
 
         void ITask.Run()
         {
-            Console.WriteLine($"Hello world Time: {DateTime.Now}");
+            Console.WriteLine($"Hello world Дата и Время: {DateTime.Now}");
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace IndustryLearnShip.Menu
 {
     /// <summary>
-    /// 
+    /// Main menu and runner all menu
     /// </summary>
     internal class MenuRunner
     {
@@ -33,10 +33,12 @@ namespace IndustryLearnShip.Menu
             InitTask();
             IsInit = true;
 
+            Console.WriteLine("=== Практикум по C# ===");
             for (int i = 0; i < ArrayLevels.Count; i++)
             {
                 Console.WriteLine($"{i} : {ArrayLevels[i].GetName()}");
             }
+            Console.WriteLine("Выберите Меню (q- для выхода):");
             int index = WriteIndexMenu();
             ArrayLevels[index].Show();
         }
@@ -48,9 +50,10 @@ namespace IndustryLearnShip.Menu
         {
             string read = Console.ReadLine();
             int NumTask = -1;
+
             if (read == "q" ) 
             {
-                Console.WriteLine("Close Programm");
+                Console.WriteLine("Закрытие программы...");
                 Environment.Exit(0);
             }
             try
@@ -63,7 +66,7 @@ namespace IndustryLearnShip.Menu
             }
             catch { }
             
-            Console.WriteLine("None Valid Index , Write Correct index Again");
+            Console.WriteLine("Не коректный индекс , введите индекс повторно:");
             return WriteIndexMenu();
         }
         /// <summary>
@@ -75,6 +78,11 @@ namespace IndustryLearnShip.Menu
             new LevelMenu("Level-1");
             //new LevelMenu("Level-2");
         }
+        /// <summary>
+        /// Add task in level by name
+        /// </summary>
+        /// <param name="name">level name to which conncect task</param>
+        /// <param name="task">class who exuteting</param>
         public void AddOnLevelByName(string name, ITask task)
         {
             foreach (LevelMenu level in ArrayLevels) 
@@ -86,6 +94,9 @@ namespace IndustryLearnShip.Menu
                 }
             }
         }
+        /// <summary>
+        /// get all class with TaskInfoAttribure and link with level menu
+        /// </summary>
         private void InitTask() 
         {
             if (IsInit) return;

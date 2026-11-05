@@ -16,26 +16,31 @@ namespace IndustryLearnShip.Menu
             LevelName = Name;
             MenuRunner._instance.ArrayLevels.Add(this);
         }
+        /// <summary>
+        /// Showing level Menu 
+        /// </summary>
         public void Show() 
         {
             while (true) 
             {
-                Console.WriteLine("SELECT INDEX LEVEL");
+                Console.WriteLine("--- Уровень 1: Базовый (задания 1–15) ---");
                 for (int i = 0; i < Tasks.Count; i++) 
                 {
                     ITask task = Tasks[i];
                     Console.WriteLine($"{i} : {task.Title}");
                 }
+                Console.WriteLine("Выберите задание (q- для выхода):");
+                
                 int TaskIndex = WriteIndexTask();
                 //print TAsk info
-                Console.WriteLine($"{TaskIndex} : {Tasks[TaskIndex].Title}");
-                Console.WriteLine($" Description: \n{Tasks[TaskIndex].Description}");
-                Console.WriteLine(" Requirements:");
+                Console.WriteLine($"\n -----Задание : {Tasks[TaskIndex].Title}------");
+                Console.WriteLine($"Описание: \n{Tasks[TaskIndex].Description}");
+                Console.WriteLine("Требования:");
                 foreach (string requir in Tasks[TaskIndex].Requirements) 
                 {  
-                    Console.WriteLine($"\t{requir}");    
+                    Console.WriteLine($"\t - {requir}");    
                 }
-                Console.WriteLine("RUN EXUCUTION...\n");
+                Console.WriteLine("[запуск решения]...\n");
                 Tasks[TaskIndex].Run();
             }
 
@@ -46,7 +51,7 @@ namespace IndustryLearnShip.Menu
             int NumTask = -1;
             if (read == "q" )
             {
-                Console.WriteLine("Exit main menu...\n");
+                Console.WriteLine("Выход вглавное меню...\n");
                 MenuRunner._instance.Run();
             }
             try
@@ -59,7 +64,7 @@ namespace IndustryLearnShip.Menu
             }
             catch { }
 
-            Console.WriteLine("None Valid Task Index  , Write Correct  Task index Again");
+            Console.WriteLine("не коректный индекс , введите индекс повторно:");
             return WriteIndexTask();
 
         }
