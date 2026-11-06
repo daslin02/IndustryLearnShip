@@ -12,6 +12,7 @@ namespace IndustryLearnShip
         {
             Menu.MenuRunner MR = new Menu.MenuRunner();
             MR.Run();
+            string ConflictVariable = "IS_Conflict";
         }
     }
 }
