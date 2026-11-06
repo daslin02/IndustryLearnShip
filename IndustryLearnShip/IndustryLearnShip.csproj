@@ -55,6 +55,7 @@
     <Compile Include="Tasks\Level1\Task04_EvenNumber.cs" />
     <Compile Include="Tasks\Level1\Task05_MultipleTable.cs" />
     <Compile Include="Tasks\Level1\Task06_SumNumber.cs" />
+    <Compile Include="Tasks\Level1\Task07_ReverseStr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

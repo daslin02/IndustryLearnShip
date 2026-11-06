@@ -66,7 +66,7 @@ namespace IndustryLearnShip.Tasks.Level1
                     break;
 
                 default:
-                    Console.WriteLine("❌ Неизвестная операция");
+                    Console.WriteLine(" Неизвестная операция");
                     break;
             }
         }
