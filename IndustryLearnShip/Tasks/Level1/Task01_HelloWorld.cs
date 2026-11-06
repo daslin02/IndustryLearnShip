@@ -8,17 +8,21 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
+    [Common.TaskInfoAttribute("Level-1")]
     internal class Task01_HelloWorld : Common.ITask
     {
-        string ITask.Title => throw new NotImplementedException();
+        string ITask.Title => "Hellow world";
 
-        string ITask.Description => throw new NotImplementedException();
+        string ITask.Description => "выводит ";
 
-        string[] ITask.Requirements => throw new NotImplementedException();
+        string[] ITask.Requirements => new[] {" Использовать `Console.WriteLine`" , 
+            "Дату получить через `DateTime.Now`, отформатировать как `dd.MM.yyyy`" ,
+            "Вывести две строки: приветствие и дату"
+        };
 
         void ITask.Run()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Hello world Дата и Время: {DateTime.Now:dd.MM.yyyy}");
         }
     }
 }
