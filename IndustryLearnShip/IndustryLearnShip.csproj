@@ -57,6 +57,7 @@
     <Compile Include="Tasks\Level1\Task06_SumNumber.cs" />
     <Compile Include="Tasks\Level1\Task07_ReverseStr.cs" />
     <Compile Include="Tasks\Level1\Task08_FizzBuzz.cs" />
+    <Compile Include="Tasks\Level1\Task09_Array.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
