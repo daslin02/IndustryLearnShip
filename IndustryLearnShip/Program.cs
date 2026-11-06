@@ -12,7 +12,6 @@ namespace IndustryLearnShip
         {
             Menu.MenuRunner MR = new Menu.MenuRunner();
             MR.Run();
-            string ConflictVariable = "SATORU GOJO";
 
         }
     }
