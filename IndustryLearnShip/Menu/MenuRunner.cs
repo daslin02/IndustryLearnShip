@@ -18,7 +18,7 @@ namespace IndustryLearnShip.Menu
         static public MenuRunner _instance;
         public MenuRunner()
         {
-            if (_instance == null )
+            if (_instance == null)
             {
                 _instance = this;
             }
@@ -51,7 +51,7 @@ namespace IndustryLearnShip.Menu
             string read = Console.ReadLine();
             int NumTask = -1;
 
-            if (read == "q" ) 
+            if (read == "q")
             {
                 Console.WriteLine("Закрытие программы...");
                 Environment.Exit(0);
@@ -65,7 +65,7 @@ namespace IndustryLearnShip.Menu
                 }
             }
             catch { }
-            
+
             Console.WriteLine("Не коректный индекс , введите индекс повторно:");
             return WriteIndexMenu();
         }
@@ -85,9 +85,9 @@ namespace IndustryLearnShip.Menu
         /// <param name="task">class who exuteting</param>
         public void AddOnLevelByName(string name, ITask task)
         {
-            foreach (LevelMenu level in ArrayLevels) 
+            foreach (LevelMenu level in ArrayLevels)
             {
-                if (level.GetName() == name) 
+                if (level.GetName() == name)
                 {
                     level.Tasks.Add(task);
                     break;
@@ -97,14 +97,14 @@ namespace IndustryLearnShip.Menu
         /// <summary>
         /// get all class with TaskInfoAttribure and link with level menu
         /// </summary>
-        private void InitTask() 
+        private void InitTask()
         {
             if (IsInit) return;
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var allTypes = assembly.GetTypes();
             var TaskTypes = allTypes.Where(Type => Type.GetCustomAttribute<Common.TaskInfoAttribute>() != null);
 
-            foreach (var type in TaskTypes) 
+            foreach (var type in TaskTypes)
             {
                 var attribute = type.GetCustomAttribute<Common.TaskInfoAttribute>();
                 string targetLevelName = attribute.LevelName;

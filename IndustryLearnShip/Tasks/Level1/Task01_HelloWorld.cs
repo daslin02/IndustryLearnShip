@@ -15,11 +15,14 @@ namespace IndustryLearnShip.Tasks.Level1
 
         string ITask.Description => "выводит ";
 
-        string[] ITask.Requirements => new[] {"Вывод Hello world" , "Вывод текущего времени"};
+        string[] ITask.Requirements => new[] {" Использовать `Console.WriteLine`" , 
+            "Дату получить через `DateTime.Now`, отформатировать как `dd.MM.yyyy`" ,
+            "Вывести две строки: приветствие и дату"
+        };
 
         void ITask.Run()
         {
-            Console.WriteLine($"Hello world Дата и Время: {DateTime.Now}");
+            Console.WriteLine($"Hello world Дата и Время: {DateTime.Now:dd.MM.yyyy}");
         }
     }
 }

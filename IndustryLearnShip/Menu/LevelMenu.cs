@@ -42,6 +42,7 @@ namespace IndustryLearnShip.Menu
                 }
                 Console.WriteLine("[запуск решения]...\n");
                 Tasks[TaskIndex].Run();
+                Console.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             }
 
         }
