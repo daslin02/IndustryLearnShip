@@ -61,6 +61,7 @@
     <Compile Include="Tasks\Level1\Task10_BubbleSort.cs" />
     <Compile Include="Tasks\Level1\Task11_DioganalMatrix.cs" />
     <Compile Include="Tasks\Level1\Task12_Palindrom.cs" />
+    <Compile Include="Tasks\Level1\Task13_WordCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
