@@ -8,7 +8,7 @@ namespace IndustryLearnShip.Tasks.Level2
     [Common.TaskInfoAttribute("Level-2")]
     internal class Task17_StringBuilderBenchmark : ITask
     {
-        public string Title => "StringBuilder vs конкатенация (замер производительности)";
+        public string Title => "StringBuilder vs конкатенация (замер производительности) Задание 17";
 
         public string Description => "Сравнение производительности конкатенации через + и StringBuilder.";
 

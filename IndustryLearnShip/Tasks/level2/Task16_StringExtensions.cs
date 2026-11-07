@@ -11,7 +11,7 @@ namespace IndustryLearnShip.Tasks.level2
     [Common.TaskInfoAttribute("Level-2")]
     internal class Task16_StringExtensions : ITask
     {
-        public string Title => "Методы расширения для string";
+        public string Title => "Методы расширения для string Задание 16";
 
         public string Description => "Реализация и демонстрация extension-методов для типа string.";
 

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
+    <Compile Include="Enums\CustomDayOfWeek.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Helpers\CustomArray.cs" />
     <Compile Include="Menu\LevelMenu.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Tasks\level2\Task18_ParseComparison.cs" />
     <Compile Include="Tasks\level2\Task19_CustomCollections.cs" />
     <Compile Include="Tasks\level2\Task20_Generics.cs" />
+    <Compile Include="Tasks\level2\Task21_DayOfWeekEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

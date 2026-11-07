@@ -11,7 +11,7 @@ namespace IndustryLearnShip.Tasks.level2
     [Common.TaskInfoAttribute("Level-2")]
     internal class Task19_CustomCollections : ITask
     {
-        public string Title => "Свой стек и очередь на массиве";
+        public string Title => "Свой стек и очередь на массиве Задание 19";
 
         public string Description => "Реализация MyStack<T> и MyQueue<T> на массиве с автоматическим расширением.";
 

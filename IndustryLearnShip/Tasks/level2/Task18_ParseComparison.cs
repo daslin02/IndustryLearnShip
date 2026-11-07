@@ -7,7 +7,7 @@ namespace IndustryLearnShip.Tasks.Level2
     [Common.TaskInfoAttribute("Level-2")]
     internal class Task18_ParseComparison : ITask
     {
-        public string Title => "TryParse vs try/catch";
+        public string Title => "TryParse vs try/catch Задание 18";
 
         public string Description => "Сравнение двух способов обработки некорректного ввода числа.";
 

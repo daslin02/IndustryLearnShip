@@ -103,6 +103,13 @@ namespace IndustryLearnShip.Menu
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var allTypes = assembly.GetTypes();
             var TaskTypes = allTypes.Where(Type => Type.GetCustomAttribute<Common.TaskInfoAttribute>() != null);
+                                    //  .OrderBy(t =>
+                                    //  {
+                                    //      var attr = t.GetType().GetCustomAttributes(typeof(TaskInfoAttribute), false)
+                                    //                              .FirstOrDefault() as TaskInfoAttribute;
+                                    //      return attr?.Order ?? 0;
+                                    //  })
+                                    //.ToList();
 
             foreach (var type in TaskTypes)
             {
