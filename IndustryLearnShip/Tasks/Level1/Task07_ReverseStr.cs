@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 7)]
     internal class Task07_ReverseStr : ITask
     {
         public string Title => " Реверс строки без LINQ";

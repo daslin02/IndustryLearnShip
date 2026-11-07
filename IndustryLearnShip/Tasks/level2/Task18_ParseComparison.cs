@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace IndustryLearnShip.Tasks.Level2
 {
-    [Common.TaskInfoAttribute("Level-2")]
+    [Common.TaskInfoAttribute("Level-2" , 18)]
     internal class Task18_ParseComparison : ITask
     {
-        public string Title => "TryParse vs try/catch Задание 18";
+        public string Title => "TryParse vs try/catch ";
 
         public string Description => "Сравнение двух способов обработки некорректного ввода числа.";
 

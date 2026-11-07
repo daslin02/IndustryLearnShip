@@ -3,7 +3,7 @@ using System;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 14)]
     internal class Task14_AgeCalculator : ITask
     {
         public string Title => "Возраст по дате рождения";

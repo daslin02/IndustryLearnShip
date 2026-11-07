@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 9 )]
     internal class Task09_Array : ITask
     {
         public string Title => " Массивы: min/max/sum/avg";

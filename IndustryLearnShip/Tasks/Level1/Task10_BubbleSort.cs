@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 10)]
     internal class Task10_BubbleSort : ITask
     {
         public string Title => "Сортировка пузырьком + вставками";

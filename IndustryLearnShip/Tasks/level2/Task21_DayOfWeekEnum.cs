@@ -4,10 +4,10 @@ using System;
 
 namespace IndustryLearnShip.Tasks.Level2
 {
-    [Common.TaskInfoAttribute("Level-2")]
+    [Common.TaskInfoAttribute("Level-2" , 21)]
     internal class Task21_DayOfWeekEnum : ITask
     {
-        public string Title => "enum дни недели Задание 21";
+        public string Title => "enum дни недели ";
 
         public string Description => "Описание дней недели через enum и определение типа дня.";
 

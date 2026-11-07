@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.level2
 {
-    [Common.TaskInfoAttribute("Level-2")]
+    [Common.TaskInfoAttribute("Level-2" , 20)]
     internal class Task20_Generics : ITask
     {
-        public string Title => "Обобщения: Swap<T> и Max<T> Задание 20";
+        public string Title => "Обобщения: Swap<T> и Max<T> ";
 
         public string Description => "Реализация и демонстрация обобщённых методов Swap и Max с ограничением IComparable<T>.";
 

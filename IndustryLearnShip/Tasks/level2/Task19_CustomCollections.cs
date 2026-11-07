@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.level2
 {
-    [Common.TaskInfoAttribute("Level-2")]
+    [Common.TaskInfoAttribute("Level-2" , 19)]
     internal class Task19_CustomCollections : ITask
     {
-        public string Title => "Свой стек и очередь на массиве Задание 19";
+        public string Title => "Свой стек и очередь на массиве ";
 
         public string Description => "Реализация MyStack<T> и MyQueue<T> на массиве с автоматическим расширением.";
 

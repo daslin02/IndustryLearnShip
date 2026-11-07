@@ -5,10 +5,10 @@ using System.Text;
 
 namespace IndustryLearnShip.Tasks.Level2
 {
-    [Common.TaskInfoAttribute("Level-2")]
+    [Common.TaskInfoAttribute("Level-2" , 17)]
     internal class Task17_StringBuilderBenchmark : ITask
     {
-        public string Title => "StringBuilder vs конкатенация (замер производительности) Задание 17";
+        public string Title => "StringBuilder vs конкатенация (замер производительности) ";
 
         public string Description => "Сравнение производительности конкатенации через + и StringBuilder.";
 

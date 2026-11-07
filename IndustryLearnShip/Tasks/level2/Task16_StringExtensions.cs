@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.level2
 {
-    [Common.TaskInfoAttribute("Level-2")]
+    [Common.TaskInfoAttribute("Level-2" , 16)]
     internal class Task16_StringExtensions : ITask
     {
-        public string Title => "Методы расширения для string Задание 16";
+        public string Title => "Методы расширения для string";
 
         public string Description => "Реализация и демонстрация extension-методов для типа string.";
 
