@@ -76,7 +76,7 @@ namespace IndustryLearnShip.Menu
         {
             if (IsInit) return;
             new LevelMenu("Level-1");
-            //new LevelMenu("Level-2");
+            new LevelMenu("Level-2");
         }
         /// <summary>
         /// Add task in level by name

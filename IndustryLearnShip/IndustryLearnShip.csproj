@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Tasks\Level1\Task12_Palindrom.cs" />
     <Compile Include="Tasks\Level1\Task13_WordCounter.cs" />
     <Compile Include="Tasks\Level1\Task14_AgeCalculator.cs" />
+    <Compile Include="Tasks\level2\Task16_StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
