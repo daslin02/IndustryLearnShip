@@ -152,4 +152,24 @@ namespace IndustryLearnShip.Helpers
         /// </summary>
         public bool IsEmpty => _count == 0;
     }
+    public static class GenericUtils
+    {
+        /// <summary>
+        /// Swaps the values of two variables.
+        /// </summary>
+        public static void Swap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
+
+        /// <summary>
+        /// Returns the greater of two values based on IComparable<T>.
+        /// </summary>
+        public static T Max<T>(T a, T b) where T : IComparable<T>
+        {
+            return a.CompareTo(b) > 0 ? a : b;
+        }
+    }
 }

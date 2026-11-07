@@ -69,6 +69,7 @@
     <Compile Include="Tasks\level2\Task17_StringBuilderBenchmark.cs" />
     <Compile Include="Tasks\level2\Task18_ParseComparison.cs" />
     <Compile Include="Tasks\level2\Task19_CustomCollections.cs" />
+    <Compile Include="Tasks\level2\Task20_Generics.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
