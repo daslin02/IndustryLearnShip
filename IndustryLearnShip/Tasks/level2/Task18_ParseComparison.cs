@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace IndustryLearnShip.Tasks.Level1
+namespace IndustryLearnShip.Tasks.Level2
 {
     [Common.TaskInfoAttribute("Level-2")]
     internal class Task18_ParseComparison : ITask

@@ -46,6 +46,7 @@
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\CustomArray.cs" />
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Program.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Tasks\level2\Task16_StringExtensions.cs" />
     <Compile Include="Tasks\level2\Task17_StringBuilderBenchmark.cs" />
     <Compile Include="Tasks\level2\Task18_ParseComparison.cs" />
+    <Compile Include="Tasks\level2\Task19_CustomCollections.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Text;
 
-namespace IndustryLearnShip.Tasks.Level1
+namespace IndustryLearnShip.Tasks.Level2
 {
     [Common.TaskInfoAttribute("Level-2")]
     internal class Task17_StringBuilderBenchmark : ITask
