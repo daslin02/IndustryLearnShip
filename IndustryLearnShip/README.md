@@ -72,17 +72,17 @@
 | 24 | ООП: `Animal → Dog/Cat/Bird` |  Выполнено |
 | 25 | Интерфейс `IShape` + сортировка фигур |  Выполнено |
 | 26 | Паттерн «Стратегия» (скидки) |  Выполнено |
-| 27 | `IComparable` / `IComparer<T>` для `Student` |  Не начато |
-| 28 | `Equals` / `GetHashCode` для `Point` |  Не начато |
-| 29 | Паттерн «Фабрика» (уведомления) | Не начато |
-| 30 | `BankAccount` + свой `Exception` |  Не начато |
+| 27 | `IComparable` / `IComparer<T>` для `Student` |  Выполнено |
+| 28 | `Equals` / `GetHashCode` для `Point` |  Выполнено |
+| 29 | Паттерн «Фабрика» (уведомления) | Выполнено |
+| 30 | `BankAccount` + свой `Exception` |  Выполнено |
 | 31 | `IDisposable` + `using` |  Не начато |
 | 32 | Свойства с валидацией (`Temperature`) | Не начато |
 | 33 | LINQ: сотрудники (top-3, avg по отделу, фильтр) |  Не начато |
 | 34 | LINQ: группировка слов по первой букве |  Не начато |
 | 35 | Git: `.gitignore`, `.editorconfig`, PR, Conventional Commits, rebase |  Не начато |
 
-**Прогресс:** 10/20 
+**Прогресс:** 15/20 
 
 ---
 

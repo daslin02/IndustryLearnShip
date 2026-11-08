@@ -55,6 +55,7 @@
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\BankAccount.cs.cs" />
     <Compile Include="Models\Discount.cs.cs" />
     <Compile Include="Models\Notification.cs.cs" />
     <Compile Include="Models\Point.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Tasks\level2\Task27_StudentSorting.cs" />
     <Compile Include="Tasks\level2\Task28_PointEquality.cs" />
     <Compile Include="Tasks\level2\Task29_NotificationFactory.cs" />
+    <Compile Include="Tasks\level2\Task30_BankAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
