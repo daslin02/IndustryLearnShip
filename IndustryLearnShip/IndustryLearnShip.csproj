@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IDiscountStrategy.cs" />
     <Compile Include="Common\IShape.cs" />
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Discount.cs.cs" />
     <Compile Include="Models\Shape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Tasks\level2\Task23_Nullable.cs" />
     <Compile Include="Tasks\level2\Task24_AnimalHierarchy.cs" />
     <Compile Include="Tasks\level2\Task25_ShapeSorting.cs" />
+    <Compile Include="Tasks\level2\Task26_DiscountStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
