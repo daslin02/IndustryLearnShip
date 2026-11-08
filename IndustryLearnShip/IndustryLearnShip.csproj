@@ -60,6 +60,7 @@
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\BankAccount.cs.cs" />
     <Compile Include="Models\Discount.cs.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Notification.cs.cs" />
     <Compile Include="Models\Point.cs" />
     <Compile Include="Models\Shape.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Tasks\level2\Task30_BankAccount.cs" />
     <Compile Include="Tasks\level2\Task31_DisposableFileWriter.cs" />
     <Compile Include="Tasks\level2\Task32_Temperature.cs" />
+    <Compile Include="Tasks\level2\Task33_LinqEmployees.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
