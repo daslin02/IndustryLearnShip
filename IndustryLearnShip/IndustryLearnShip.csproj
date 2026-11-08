@@ -64,6 +64,7 @@
     <Compile Include="Models\Point.cs" />
     <Compile Include="Models\Shape.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Temperature.cs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Level1\Task01_HelloWorld.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Tasks\level2\Task29_NotificationFactory.cs" />
     <Compile Include="Tasks\level2\Task30_BankAccount.cs" />
     <Compile Include="Tasks\level2\Task31_DisposableFileWriter.cs" />
+    <Compile Include="Tasks\level2\Task32_Temperature.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
