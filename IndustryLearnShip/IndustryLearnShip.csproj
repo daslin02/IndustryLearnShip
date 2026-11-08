@@ -72,6 +72,7 @@
     <Compile Include="Tasks\level2\Task19_CustomCollections.cs" />
     <Compile Include="Tasks\level2\Task20_Generics.cs" />
     <Compile Include="Tasks\level2\Task21_DayOfWeekEnum.cs" />
+    <Compile Include="Tasks\level2\Task22_ParamsSum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
