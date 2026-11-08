@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IShape.cs" />
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
     <Compile Include="Enums\CustomDayOfWeek.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Shape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Level1\Task01_HelloWorld.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Tasks\level2\Task22_ParamsSum.cs" />
     <Compile Include="Tasks\level2\Task23_Nullable.cs" />
     <Compile Include="Tasks\level2\Task24_AnimalHierarchy.cs" />
+    <Compile Include="Tasks\level2\Task25_ShapeSorting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
