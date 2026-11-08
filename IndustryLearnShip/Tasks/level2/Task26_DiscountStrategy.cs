@@ -19,6 +19,7 @@ namespace IndustryLearnShip.Tasks.Level2
             "Продемонстрировать расчёт цены с каждой стратегией"
         };
 
+
         public void Run()
         {
             decimal basePrice = 1000m;
