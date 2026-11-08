@@ -100,6 +100,7 @@
     <Compile Include="Tasks\level2\Task31_DisposableFileWriter.cs" />
     <Compile Include="Tasks\level2\Task32_Temperature.cs" />
     <Compile Include="Tasks\level2\Task33_LinqEmployees.cs" />
+    <Compile Include="Tasks\level2\Task34_LinqWordGrouping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
