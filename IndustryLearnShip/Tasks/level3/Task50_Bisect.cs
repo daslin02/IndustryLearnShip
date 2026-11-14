@@ -19,9 +19,10 @@ namespace IndustryLearnShip.Tasks.level3
         public void Run()
         {
             Console.WriteLine($"Сложение {MathUtils.Add(10, 10)}");
-            Console.WriteLine($"Сложение {MathUtils.Subtract(10, 20)}");
-            Console.WriteLine($"Сложение {MathUtils.Multiply(10, 10)}");
-            Console.WriteLine($"Сложение {MathUtils.Divide(10, 10)}");
+            Console.WriteLine($"Subtract {MathUtils.Subtract(10, 20)}");
+            Console.WriteLine($"Multiply {MathUtils.Multiply(10, 10)}");
+            Console.WriteLine($"Divide {MathUtils.Divide(10, 10)}");
+            Console.WriteLine($"Power {MathUtils.Power(10, 3)}");
         }
 
     }
@@ -52,14 +53,14 @@ namespace IndustryLearnShip.Tasks.level3
             {
                 Console.WriteLine("Деление на ноль недопустимо.");
             }
-            return a / b;
+            return a - b;
         }
 
 
-        //public static double Power(double baseValue, double exponent)
-        //{
-        //    return Math.Pow(baseValue, exponent);
-        //}
+        public static double Power(double baseValue, double exponent)
+        {
+            return Math.Pow(baseValue, exponent);
+        }
 
 
         //public static double Modulo(double a, double b)
