@@ -27,3 +27,20 @@ git log --graph --oneline --all :
 |/|
 * | 4eef2d4 Make ConfliactVariable
 :
+
+# Task 46:
+
+`git stash list` **после сокрытия через **  `git stash`
+
+stash@{0}: WIP on Level-3: 678ed44 complete task 45
+
+
+`git stash list` **после раскрытия через **  `git stash pop`
+
+` ` - пустой
+
+
+
+
+
+
