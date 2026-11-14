@@ -101,6 +101,7 @@
     <Compile Include="Tasks\level2\Task32_Temperature.cs" />
     <Compile Include="Tasks\level2\Task33_LinqEmployees.cs" />
     <Compile Include="Tasks\level2\Task34_LinqWordGrouping.cs" />
+    <Compile Include="Tasks\level3\Task36_FindDuplicates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
