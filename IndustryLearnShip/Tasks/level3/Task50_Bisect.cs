@@ -24,6 +24,7 @@ namespace IndustryLearnShip.Tasks.level3
             Console.WriteLine($"Divide {MathUtils.Divide(10, 10)}");
             Console.WriteLine($"Power {MathUtils.Power(10, 3)}");
             Console.WriteLine($"Module {MathUtils.Modulo(10, 3)}");
+            Console.WriteLine($"Square Root {MathUtils.SquareRoot(25)}");
         }
 
     }
@@ -74,14 +75,14 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static double SquareRoot(double a)
-        //{
-        //    if (a < 0)
-        //    {
-        //        Console.WriteLine("Нельзя извлечь квадратный корень из отрицательного числа.");
-        //    }
-        //    return Math.Sqrt(a);
-        //}
+        public static double SquareRoot(double a)
+        {
+            if (a < 0)
+            {
+                Console.WriteLine("Нельзя извлечь квадратный корень из отрицательного числа.");
+            }
+            return Math.Sqrt(a);
+        }
 
 
         //public static long Factorial(int n)
