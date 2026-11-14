@@ -39,8 +39,11 @@ stash@{0}: WIP on Level-3: 678ed44 complete task 45
 
 ` ` - пустой
 
+# Task 47
 
-
+Create commit 2
+Create commit 3
+Create commit 4
 
 
 
