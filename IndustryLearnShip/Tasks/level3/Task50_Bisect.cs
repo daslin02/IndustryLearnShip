@@ -23,6 +23,7 @@ namespace IndustryLearnShip.Tasks.level3
             Console.WriteLine($"Multiply {MathUtils.Multiply(10, 10)}");
             Console.WriteLine($"Divide {MathUtils.Divide(10, 10)}");
             Console.WriteLine($"Power {MathUtils.Power(10, 3)}");
+            Console.WriteLine($"Module {MathUtils.Modulo(10, 3)}");
         }
 
     }
@@ -63,14 +64,14 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static double Modulo(double a, double b)
-        //{
-        //    if (b == 0)
-        //    {
-        //        Console.WriteLine("Делитель не может быть равен нулю.");
-        //    }
-        //    return a % b;
-        //}
+        public static double Modulo(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Делитель не может быть равен нулю.");
+            }
+            return a % b;
+        }
 
 
         //public static double SquareRoot(double a)
