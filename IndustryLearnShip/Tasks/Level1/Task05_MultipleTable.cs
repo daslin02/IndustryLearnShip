@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 4 )]
     internal class Task05_MultipleTable : ITask
     {
         public string Title => "Таблица умножения 10×10";

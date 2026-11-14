@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 6)]
     internal class Task06_SumNumber : ITask
     {
         public string Title => "Сумма цифр";

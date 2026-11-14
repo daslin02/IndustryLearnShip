@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 1)]
     internal class Task01_HelloWorld : Common.ITask
     {
         string ITask.Title => "Hellow world";

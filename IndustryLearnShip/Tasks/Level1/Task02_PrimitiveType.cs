@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 2)]
     internal class Task02_PrimitiveType : ITask
     {
         public string Title => "Переменные примитивных типов";

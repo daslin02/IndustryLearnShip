@@ -11,9 +11,22 @@ namespace IndustryLearnShip.Menu
     {
         public List<Common.ITask> Tasks = new List<Common.ITask>();
          private string LevelName = "NULL";
+        private string LevelDescription = "NULL";
         public LevelMenu(string Name) 
         {
             LevelName = Name;
+            switch (LevelName)
+            {
+                case "Level-1":
+                    LevelDescription = "Уровень 1: Базовый (задания 1–15)";
+                    break;
+                case "Level-2":
+                    LevelDescription = "Уровень 2 — Средний (задания 16–35)";
+                    break;
+                default:
+                    LevelDescription = "Неизвестный уровень";
+                    break;
+            }
             MenuRunner._instance.ArrayLevels.Add(this);
         }
         /// <summary>
@@ -23,7 +36,8 @@ namespace IndustryLearnShip.Menu
         {
             while (true) 
             {
-                Console.WriteLine("--- Уровень 1: Базовый (задания 1–15) ---");
+                
+                Console.WriteLine($"--- {LevelDescription} ---");
                 for (int i = 0; i < Tasks.Count; i++) 
                 {
                     ITask task = Tasks[i];

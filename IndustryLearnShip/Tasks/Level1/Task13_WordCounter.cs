@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 13)]
     internal class Task13_WordCounter : ITask
     {
         public string Title => "Счётчик вхождений слов в тексте";

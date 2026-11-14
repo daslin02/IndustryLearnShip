@@ -3,7 +3,7 @@ using System;
 
 namespace IndustryLearnShip.Tasks.Level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1" , 11)]
     internal class Task11_DioganalMatrix : ITask
     {
         public string Title => "Диагональ матрицы N×N";

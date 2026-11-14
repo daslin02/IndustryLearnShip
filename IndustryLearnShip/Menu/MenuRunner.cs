@@ -76,7 +76,7 @@ namespace IndustryLearnShip.Menu
         {
             if (IsInit) return;
             new LevelMenu("Level-1");
-            //new LevelMenu("Level-2");
+            new LevelMenu("Level-2");
         }
         /// <summary>
         /// Add task in level by name
@@ -102,7 +102,13 @@ namespace IndustryLearnShip.Menu
             if (IsInit) return;
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var allTypes = assembly.GetTypes();
-            var TaskTypes = allTypes.Where(Type => Type.GetCustomAttribute<Common.TaskInfoAttribute>() != null);
+            var TaskTypes = allTypes.Where(t => t.GetCustomAttribute<Common.TaskInfoAttribute>() != null)
+                                    .OrderBy(t =>
+                                    {
+                                        var attr = t.GetCustomAttribute<Common.TaskInfoAttribute>();
+                                        return attr?.Order ?? 0;
+                                    })
+                                    .ToList();
 
             foreach (var type in TaskTypes)
             {
