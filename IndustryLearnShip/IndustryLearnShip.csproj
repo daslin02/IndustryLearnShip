@@ -108,6 +108,7 @@
     <Compile Include="Tasks\level3\Task40_AsyncDownload.cs" />
     <Compile Include="Tasks\level3\Task41_TaskWhenAll.cs" />
     <Compile Include="Tasks\level3\Task42_CancellationToken.cs" />
+    <Compile Include="Tasks\level3\Task43_MultipleExceptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
