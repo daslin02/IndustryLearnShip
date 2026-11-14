@@ -104,6 +104,7 @@
     <Compile Include="Tasks\level3\Task36_FindDuplicates.cs" />
     <Compile Include="Tasks\level3\Task37_FibonacciMemoization.cs" />
     <Compile Include="Tasks\level3\Task38_CollectionsBenchmark.cs" />
+    <Compile Include="Tasks\level3\Task39_YieldReturn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
