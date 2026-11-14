@@ -90,10 +90,13 @@
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\BankAccount.cs.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Discount.cs.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Library.cs" />
     <Compile Include="Models\Notification.cs.cs" />
     <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\Reader.cs" />
     <Compile Include="Models\Shape.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\TaskItem.cs" />
@@ -144,6 +147,8 @@
     <Compile Include="Tasks\level3\Task42_CancellationToken.cs" />
     <Compile Include="Tasks\level3\Task43_MultipleExceptions.cs" />
     <Compile Include="Tasks\level3\Task44_TodoList.cs" />
+    <Compile Include="Tasks\level3\Task45_Library.cs" />
+    <Compile Include="Tests\LibraryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
