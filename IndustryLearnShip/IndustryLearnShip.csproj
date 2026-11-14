@@ -102,6 +102,7 @@
     <Compile Include="Tasks\level2\Task33_LinqEmployees.cs" />
     <Compile Include="Tasks\level2\Task34_LinqWordGrouping.cs" />
     <Compile Include="Tasks\level3\Task36_FindDuplicates.cs" />
+    <Compile Include="Tasks\level3\Task37_FibonacciMemoization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
