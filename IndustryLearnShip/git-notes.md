@@ -127,7 +127,150 @@ commit 0f859f5d8b93917e648aec11c0e4176463ddee0b (HEAD -> master, tag: v1.0.0, or
 Merge: da1cddd 76834b3
 Author: daslin <111223333+daslin02@users.noreply.github.com>
 Date:   Sat Nov 14 13:24:43 2026 +0300
-=======
 
 
 
+# Task 49
+
+---
+`git reflog` до начала работы 
+---
+
+
+f5a93a4 (HEAD -> Level-3) HEAD@{0}: commit: Exucute task #49 Create commit for 
+
+cf92006 (origin/Level-3) HEAD@{1}: checkout: moving from master to Level-3
+
+7b69014 (origin/master, origin/HEAD, master) HEAD@{2}: pull --progress --no-edi
+
+460294b HEAD@{3}: checkout: moving from Level-3 to master
+
+cf92006 (origin/Level-3) HEAD@{4}: pull --progress --no-edit --no-stat --recurs
+
+45d871d HEAD@{5}: checkout: moving from master to Level-3
+
+460294b HEAD@{6}: checkout: moving from Level-3 to master
+
+45d871d HEAD@{7}: checkout: moving from master to Level-3
+
+460294b HEAD@{8}: commit: complete task 48
+
+0f859f5 (tag: v1.0.0) HEAD@{9}: checkout: moving from Level-3 to master
+
+45d871d HEAD@{10}: commit: Complete task 47
+
+---
+
+`git reflog` после удаения
+---
+
+
+cf92006 (HEAD -> Level-3, origin/Level-3) HEAD@{0}: reset: moving to HEAD~1
+
+f5a93a4 HEAD@{1}: commit: Exucute task #49 Create commit for delete
+
+cf92006 (HEAD -> Level-3, origin/Level-3) HEAD@{2}: checkout: moving from maste
+
+7b69014 (origin/master, origin/HEAD, master) HEAD@{3}: pull --progress --no-edi
+
+460294b HEAD@{4}: checkout: moving from Level-3 to master
+
+cf92006 (HEAD -> Level-3, origin/Level-3) HEAD@{5}: pull --progress --no-edit -
+
+45d871d HEAD@{6}: checkout: moving from master to Level-3
+
+460294b HEAD@{7}: checkout: moving from Level-3 to master
+
+45d871d HEAD@{8}: checkout: moving from master to Level-3
+
+460294b HEAD@{9}: commit: complete task 48
+
+0f859f5 (tag: v1.0.0) HEAD@{10}: checkout: moving from Level-3 to master
+
+
+
+---
+`git reflog` после восстановления
+--
+
+f5a93a4 (HEAD -> Level-3) HEAD@{0}: reset: moving to f5a93a4
+
+cf92006 (origin/Level-3) HEAD@{1}: reset: moving to HEAD~1
+
+f5a93a4 (HEAD -> Level-3) HEAD@{2}: commit: Exucute task #49 Create commit for 
+
+cf92006 (origin/Level-3) HEAD@{3}: checkout: moving from master to Level-3
+
+7b69014 (origin/master, origin/HEAD, master) HEAD@{4}: pull --progress --no-edi
+
+460294b HEAD@{5}: checkout: moving from Level-3 to master
+
+cf92006 (origin/Level-3) HEAD@{6}: pull --progress --no-edit --no-stat --recurs
+
+45d871d HEAD@{7}: checkout: moving from master to Level-3
+
+460294b HEAD@{8}: checkout: moving from Level-3 to master
+
+45d871d HEAD@{9}: checkout: moving from master to Level-3
+
+460294b HEAD@{10}: commit: complete task 48
+
+0f859f5 (tag: v1.0.0) HEAD@{11}: checkout: moving from Level-3 to master
+
+45d871d HEAD@{12}: commit: Complete task 47
+
+79e5a4b HEAD@{13}: pull --progress --no-edit --no-stat --recurse-submodules=no 
+
+0d4a0ab HEAD@{14}: checkout: moving from squash-deemo to Level-3
+
+006ef30 (origin/squash-deemo, squash-deemo) HEAD@{15}: commit: Complete task 46
+
+---
+`git log --oneline`
+---
+f5a93a4 (HEAD -> Level-3) HEAD@{0}: reset: moving to f5a93a4
+
+cf92006 (origin/Level-3) HEAD@{1}: reset: moving to HEAD~1
+
+f5a93a4 (HEAD -> Level-3) HEAD@{2}: commit: Exucute task #49
+
+cf92006 (origin/Level-3) HEAD@{3}: checkout: moving from mas
+
+7b69014 (origin/master, origin/HEAD, master) HEAD@{4}: pull 
+
+460294b HEAD@{5}: checkout: moving from Level-3 to master
+
+cf92006 (origin/Level-3) HEAD@{6}: pull --progress --no-edit
+
+45d871d HEAD@{7}: checkout: moving from master to Level-3
+
+460294b HEAD@{8}: checkout: moving from Level-3 to master
+
+45d871d HEAD@{9}: checkout: moving from master to Level-3
+
+460294b HEAD@{10}: commit: complete task 48
+
+0f859f5 (tag: v1.0.0) HEAD@{11}: checkout: moving from Level
+
+45d871d HEAD@{12}: commit: Complete task 47
+
+79e5a4b HEAD@{13}: pull --progress --no-edit --no-stat --rec
+
+0d4a0ab HEAD@{14}: checkout: moving from squash-deemo to Lev
+
+006ef30 (origin/squash-deemo, squash-deemo) HEAD@{15}: commi
+
+# Task 50
+
+e05949827edbf3f78d55c2bb5410996e3184a346 is the first 'bad' commit
+
+commit e05949827edbf3f78d55c2bb5410996e3184a346 (HEAD)
+
+Author: daslin <Artemserbakov26@gmail.com>
+
+Date:   Sat Nov 14 17:48:20 2026 +0300
+
+     execute task 50 Create Commit 5 Bad
+
+ IndustryLearnShip/Tasks/level3/Task50_Bisect.cs | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
