@@ -26,6 +26,7 @@ namespace IndustryLearnShip.Tasks.level3
             Console.WriteLine($"Module {MathUtils.Modulo(10, 3)}");
             Console.WriteLine($"Square Root {MathUtils.SquareRoot(25)}");
             Console.WriteLine($"Factorial {MathUtils.Factorial(6)}");
+            Console.WriteLine($"Even {MathUtils.IsEven(7)}");
         }
 
     }
@@ -106,10 +107,10 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static bool IsEven(int n)
-        //{
-        //    return n % 2 == 0;
-        //}
+        public static bool IsEven(int n)
+        {
+            return n % 2 == 0;
+        }
 
 
         //public static double AbsoluteValue(double n)
