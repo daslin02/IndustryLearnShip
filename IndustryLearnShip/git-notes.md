@@ -54,3 +54,21 @@ ff53dcc Complete task 3
 0157643 Make task 2
 69f1e87 Create Radme
 badb6a3 Translate to Rus
+
+
+# Task 48
+
+
+`git tag` v1.0.0
+
+`git show v1.0.0` 
+tag v1.0.0
+Tagger: daslin <Artemserbakov26@gmail.com>
+Date:   Sat Nov 14 15:30:57 2026 +0300
+
+Release v1.0.0
+
+commit 0f859f5d8b93917e648aec11c0e4176463ddee0b (HEAD -> master, tag: v1.0.0, origin/master, origin/HEAD)
+Merge: da1cddd 76834b3
+Author: daslin <111223333+daslin02@users.noreply.github.com>
+Date:   Sat Nov 14 13:24:43 2026 +0300
