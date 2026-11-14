@@ -27,6 +27,7 @@ namespace IndustryLearnShip.Tasks.level3
             Console.WriteLine($"Square Root {MathUtils.SquareRoot(25)}");
             Console.WriteLine($"Factorial {MathUtils.Factorial(6)}");
             Console.WriteLine($"Even {MathUtils.IsEven(7)}");
+            Console.WriteLine($"ABS {MathUtils.AbsoluteValue(-7)}");
         }
 
     }
@@ -113,9 +114,9 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static double AbsoluteValue(double n)
-        //{
-        //    return Math.Abs(n);
-        //}
+        public static double AbsoluteValue(double n)
+        {
+            return Math.Abs(n);
+        }
     }
 }
