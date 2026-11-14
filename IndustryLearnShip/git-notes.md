@@ -260,3 +260,17 @@ cf92006 (origin/Level-3) HEAD@{6}: pull --progress --no-edit
 
 006ef30 (origin/squash-deemo, squash-deemo) HEAD@{15}: commi
 
+# Task 50
+
+e05949827edbf3f78d55c2bb5410996e3184a346 is the first 'bad' commit
+
+commit e05949827edbf3f78d55c2bb5410996e3184a346 (HEAD)
+
+Author: daslin <Artemserbakov26@gmail.com>
+
+Date:   Sat Nov 14 17:48:20 2026 +0300
+
+     execute task 50 Create Commit 5 Bad
+
+ IndustryLearnShip/Tasks/level3/Task50_Bisect.cs | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
