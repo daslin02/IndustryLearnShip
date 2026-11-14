@@ -19,6 +19,7 @@ namespace IndustryLearnShip.Tasks.level3
         public void Run()
         {
             Console.WriteLine($"Сложение {MathUtils.Add(10, 10)}");
+            Console.WriteLine($"Сложение {MathUtils.Subtract(10, 20)}");
         }
 
     }
@@ -31,10 +32,10 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static double Subtract(double a, double b)
-        //{
-        //    return a - b;
-        //}
+        public static double Subtract(double a, double b)
+        {
+            return a - b;
+        }
 
 
         //public static double Multiply(double a, double b)
