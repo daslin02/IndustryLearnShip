@@ -27,3 +27,30 @@ git log --graph --oneline --all :
 |/|
 * | 4eef2d4 Make ConfliactVariable
 :
+
+
+# task 35:
+
+2679e8d (HEAD -> rebase-demo) Mark complete 20 from 20 task
+da1cddd (origin/master, origin/HEAD, master) Complete level 2
+0be812c mark complete Level-1
+7d7832c complete level-1
+dc92e56 Merge pull request #2 from daslin02/Level-1
+76a37b5 (Level-1) Merge branch 'master' into Level-1
+e9cae36 Make Conflicr Variable
+4eef2d4 Make ConfliactVariable
+e4141a3 Merge pull request #1 from daslin02/Level-1
+7fee7c9 complete Task 14
+e495a9c complete  Task 13
+27a4320 Complete Task 12
+d905660 Complete task 11
+0c9bdf5 complete task 10
+a378c1e Complete Task 9
+a76a9fd Complete task 8
+21460eb complete task 7
+03b4c54 Complete Task 6
+0be0993 complete task 4
+ff53dcc Complete task 3
+0157643 Make task 2
+69f1e87 Create Radme
+badb6a3 Translate to Rus
