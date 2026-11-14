@@ -106,6 +106,7 @@
     <Compile Include="Tasks\level3\Task38_CollectionsBenchmark.cs" />
     <Compile Include="Tasks\level3\Task39_YieldReturn.cs" />
     <Compile Include="Tasks\level3\Task40_AsyncDownload.cs" />
+    <Compile Include="Tasks\level3\Task41_TaskWhenAll.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
