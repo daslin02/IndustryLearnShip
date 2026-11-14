@@ -20,6 +20,7 @@ namespace IndustryLearnShip.Tasks.level3
         {
             Console.WriteLine($"Сложение {MathUtils.Add(10, 10)}");
             Console.WriteLine($"Сложение {MathUtils.Subtract(10, 20)}");
+            Console.WriteLine($"Сложение {MathUtils.Multiply(10, 10)}");
         }
 
     }
@@ -38,10 +39,10 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static double Multiply(double a, double b)
-        //{
-        //    return a * b;
-        //}
+        public static double Multiply(double a, double b)
+        {
+            return a * b;
+        }
 
 
         //public static double Divide(double a, double b)
