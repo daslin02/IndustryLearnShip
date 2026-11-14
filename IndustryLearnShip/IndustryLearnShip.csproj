@@ -105,6 +105,7 @@
     <Compile Include="Tasks\level3\Task37_FibonacciMemoization.cs" />
     <Compile Include="Tasks\level3\Task38_CollectionsBenchmark.cs" />
     <Compile Include="Tasks\level3\Task39_YieldReturn.cs" />
+    <Compile Include="Tasks\level3\Task40_AsyncDownload.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
