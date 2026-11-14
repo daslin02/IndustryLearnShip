@@ -29,6 +29,7 @@ git log --graph --oneline --all :
 :
 
 
+
 # task 35:
 
 2679e8d (HEAD -> rebase-demo) Mark complete 20 from 20 task
@@ -55,6 +56,60 @@ ff53dcc Complete task 3
 69f1e87 Create Radme
 badb6a3 Translate to Rus
 
+# Task 46:
+
+`git stash list` **после сокрытия через **  `git stash`
+
+stash@{0}: WIP on Level-3: 678ed44 complete task 45
+
+
+`git stash list` **после раскрытия через **  `git stash pop`
+
+` ` - пустой
+# Task 47
+
+
+`git log --oneline` до squash 
+
+e8ca4bf create small commit number 3
+
+6a40370 create small commit number 2
+
+fcf92e3 Added Headers of Task 47
+
+0d4a0ab (origin/Level-3, Level-3) complete task 46
+
+678ed44 complete task 45
+
+3edb24e complete task 44
+
+b2c64ef complete task 43
+
+15141ee complete task 42
+
+
+`git log --oneline` после squash 
+c335d31 (HEAD -> squash-deemo) Added Headers of Task 47
+
+0d4a0ab (origin/Level-3, Level-3) complete task 46
+
+678ed44 complete task 45
+
+3edb24e complete task 44
+
+b2c64ef complete task 43
+
+15141ee complete task 42
+
+c62b0dd complete task 41
+
+86f520b complete task 40
+
+e0a9cc0 complete task 39
+
+f1eaccd complete task 38
+
+528cbd1 complete task 37
 
 # Task 48
 
@@ -72,3 +127,7 @@ commit 0f859f5d8b93917e648aec11c0e4176463ddee0b (HEAD -> master, tag: v1.0.0, or
 Merge: da1cddd 76834b3
 Author: daslin <111223333+daslin02@users.noreply.github.com>
 Date:   Sat Nov 14 13:24:43 2026 +0300
+=======
+
+
+
