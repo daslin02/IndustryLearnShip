@@ -21,6 +21,7 @@ namespace IndustryLearnShip.Tasks.level3
             Console.WriteLine($"Сложение {MathUtils.Add(10, 10)}");
             Console.WriteLine($"Сложение {MathUtils.Subtract(10, 20)}");
             Console.WriteLine($"Сложение {MathUtils.Multiply(10, 10)}");
+            Console.WriteLine($"Сложение {MathUtils.Divide(10, 10)}");
         }
 
     }
@@ -45,14 +46,14 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static double Divide(double a, double b)
-        //{
-        //    if (b == 0)
-        //    {
-        //        throw new DivideByZeroException("Деление на ноль недопустимо.");
-        //    }
-        //    return a / b;
-        //}
+        public static double Divide(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Деление на ноль недопустимо.");
+            }
+            return a / b;
+        }
 
 
         //public static double Power(double baseValue, double exponent)
@@ -65,7 +66,7 @@ namespace IndustryLearnShip.Tasks.level3
         //{
         //    if (b == 0)
         //    {
-        //        throw new DivideByZeroException("Делитель не может быть равен нулю.");
+        //        Console.WriteLine("Делитель не может быть равен нулю.");
         //    }
         //    return a % b;
         //}
@@ -75,7 +76,7 @@ namespace IndustryLearnShip.Tasks.level3
         //{
         //    if (a < 0)
         //    {
-        //        throw new ArgumentException("Нельзя извлечь квадратный корень из отрицательного числа.");
+        //        Console.WriteLine("Нельзя извлечь квадратный корень из отрицательного числа.");
         //    }
         //    return Math.Sqrt(a);
         //}
@@ -85,7 +86,7 @@ namespace IndustryLearnShip.Tasks.level3
         //{
         //    if (n < 0)
         //    {
-        //        throw new ArgumentException("Факториал не определен для отрицательных чисел.");
+        //        Console.WriteLine("Факториал не определен для отрицательных чисел.");
         //    }
         //    if (n == 0 || n == 1)
         //    {
