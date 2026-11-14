@@ -18,16 +18,16 @@ namespace IndustryLearnShip.Tasks.level3
 
         public void Run()
         {
-            Console.WriteLine($"Сложение {MathUtils.Add(10, 10)}");
-            Console.WriteLine($"Subtract {MathUtils.Subtract(10, 20)}");
-            Console.WriteLine($"Multiply {MathUtils.Multiply(10, 10)}");
-            Console.WriteLine($"Divide {MathUtils.Divide(10, 10)}");
-            Console.WriteLine($"Power {MathUtils.Power(10, 3)}");
-            Console.WriteLine($"Module {MathUtils.Modulo(10, 3)}");
-            Console.WriteLine($"Square Root {MathUtils.SquareRoot(25)}");
-            Console.WriteLine($"Factorial {MathUtils.Factorial(6)}");
-            Console.WriteLine($"Even {MathUtils.IsEven(7)}");
-            Console.WriteLine($"ABS {MathUtils.AbsoluteValue(-7)}");
+            Console.WriteLine($"Сложение (10, 10) {MathUtils.Add(10, 10)}");
+            Console.WriteLine($"Subtract (10, 20) {MathUtils.Subtract(10, 20)}");
+            Console.WriteLine($"Multiply (10, 10) {MathUtils.Multiply(10, 10)}");
+            Console.WriteLine($"Divide (10, 10) {MathUtils.Divide(10, 10)}");
+            Console.WriteLine($"Power (10, 3) {MathUtils.Power(10, 3)}");
+            Console.WriteLine($"Module (10, 3) {MathUtils.Modulo(10, 3)}");
+            Console.WriteLine($"Square Root (25) {MathUtils.SquareRoot(25)}");
+            Console.WriteLine($"Factorial (6) {MathUtils.Factorial(6)}");
+            Console.WriteLine($"Even (7) {MathUtils.IsEven(7)}");
+            Console.WriteLine($"ABS (-99) {MathUtils.AbsoluteValue(-99)}");
         }
 
     }
