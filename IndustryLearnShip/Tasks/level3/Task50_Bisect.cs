@@ -25,6 +25,7 @@ namespace IndustryLearnShip.Tasks.level3
             Console.WriteLine($"Power {MathUtils.Power(10, 3)}");
             Console.WriteLine($"Module {MathUtils.Modulo(10, 3)}");
             Console.WriteLine($"Square Root {MathUtils.SquareRoot(25)}");
+            Console.WriteLine($"Factorial {MathUtils.Factorial(6)}");
         }
 
     }
@@ -85,24 +86,24 @@ namespace IndustryLearnShip.Tasks.level3
         }
 
 
-        //public static long Factorial(int n)
-        //{
-        //    if (n < 0)
-        //    {
-        //        Console.WriteLine("Факториал не определен для отрицательных чисел.");
-        //    }
-        //    if (n == 0 || n == 1)
-        //    {
-        //        return 1;
-        //    }
+        public static long Factorial(int n)
+        {
+            if (n < 0)
+            {
+                Console.WriteLine("Факториал не определен для отрицательных чисел.");
+            }
+            if (n == 0 || n == 1)
+            {
+                return 1;
+            }
 
-        //    long result = 1;
-        //    for (int i = 2; i <= n; i++)
-        //    {
-        //        result *= i;
-        //    }
-        //    return result;
-        //}
+            long result = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
 
 
         //public static bool IsEven(int n)
