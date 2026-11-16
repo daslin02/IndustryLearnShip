@@ -247,3 +247,25 @@ LEFT JOIN Employees m ON e.ManagerId = m.EmployeeId;
 
 ### Вывод
 Self-join позволяет соединить таблицу саму с собой для работы с иерархическими данными. Использование `LEFT JOIN` критически важно: оно сохраняет сотрудников, у которых нет руководителя (`ManagerId IS NULL`), показывая для них `NULL` в столбце `ManagerName`. При `INNER JOIN` такие сотрудники пропали бы из выборки.
+
+## Task 12 — Подзапросы в WHERE
+### SQL
+
+### Запрос
+```sql
+-- Сотрудники с зарплатой выше средней по компании
+SELECT EmployeeName, Salary
+FROM Employees
+WHERE Salary > (SELECT AVG(Salary) FROM Employees);
+
+-- Сотрудники с максимальной зарплатой
+SELECT EmployeeName, Salary
+FROM Employees
+WHERE Salary = (SELECT MAX(Salary) FROM Employees);
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task12.png)
+
+### Вывод
+Скалярный подзапрос в `WHERE` должен возвращать ровно одно значение. Если подзапрос вернет несколько строк, выполнение завершится ошибкой. Для сравнения с набором значений нужно использовать операторы `IN`, `ANY` или `ALL`. В данном случае `AVG()` и `MAX()` гарантированно дают один результат.
