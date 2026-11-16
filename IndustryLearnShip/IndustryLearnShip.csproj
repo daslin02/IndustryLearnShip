@@ -172,6 +172,7 @@
     <Content Include="DataBase\level-1\Picture\Task01.png" />
     <Content Include="DataBase\level-1\Task02_Insert.sql" />
     <Content Include="DataBase\level-1\Task03_Where.sql" />
+    <Content Include="DataBase\level-2\Picture\Task11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />

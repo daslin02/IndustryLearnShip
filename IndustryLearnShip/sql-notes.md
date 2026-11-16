@@ -229,4 +229,21 @@ ORDER BY d.DepartmentName, e.EmployeeName, p.ProjectName;
 
 ### Вывод
 При соединении 4 таблиц важно выстраивать цепочку связей логично: Сотрудники → Отделы (через DeptId), Сотрудники → Назначения (через EmpId), Назначения → Проекты (через ProjId). Псевдонимы таблиц (`e`, `d`, `p`, `ep`) делают запрос читаемым и сокращают код.
+
+## Task 11 — Self-join: иерархия руководителей
+### SQL
+
+### Запрос
+```sql
+SELECT 
+    e.EmployeeName,
+    m.EmployeeName AS ManagerName
+FROM Employees e
+LEFT JOIN Employees m ON e.ManagerId = m.EmployeeId;
 ```
+### Результат
+
+![](./DataBase/level-2/Picture/Task11.png)
+
+### Вывод
+Self-join позволяет соединить таблицу саму с собой для работы с иерархическими данными. Использование `LEFT JOIN` критически важно: оно сохраняет сотрудников, у которых нет руководителя (`ManagerId IS NULL`), показывая для них `NULL` в столбце `ManagerName`. При `INNER JOIN` такие сотрудники пропали бы из выборки.
