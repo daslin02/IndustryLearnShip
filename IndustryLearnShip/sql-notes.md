@@ -323,3 +323,24 @@ WHERE NOT EXISTS (
 
 ### Вывод
 `EXISTS` проверяет наличие строк в подзапросе и останавливает сканирование при первом совпадении, что делает его эффективным для больших наборов данных. В отличие от `IN`, `EXISTS` корректно работает с `NULL` значениями. Результаты этих запросов должны полностью совпадать с результатами заданий 8 и 9, где использовались `JOIN`.
+## Task 15 — UNION / UNION ALL
+### SQL
+
+### Запрос
+```sql
+-- UNION: уникальные строки
+SELECT EmployeeName, Salary, HireDate FROM Employees WHERE Salary > 60000
+UNION
+SELECT EmployeeName, Salary, HireDate FROM Employees WHERE YEAR(HireDate) < 2022;
+
+-- UNION ALL: все строки включая дубликаты
+SELECT EmployeeName, Salary, HireDate FROM Employees WHERE Salary > 60000
+UNION ALL
+SELECT EmployeeName, Salary, HireDate FROM Employees WHERE YEAR(HireDate) < 2022;
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task15.png)
+
+### Вывод
+`UNION` автоматически удаляет дубликаты, выполняя дополнительную сортировку и сравнение, что требует ресурсов. `UNION ALL` просто объединяет результаты без проверки уникальности и работает значительно быстрее. Разница в количестве строк между двумя запросами показывает число сотрудников, которые одновременно имеют зарплату > 60000 И наняты до 2022 года.
