@@ -135,3 +135,33 @@ ORDER BY AvgSalary DESC;
 
 ### Вывод
 `GROUP BY` преобразует детальные данные в сводные строки. Главное правило: все столбцы в `SELECT`, не являющиеся агрегатными функциями, должны быть перечислены в `GROUP BY`. Иначе сервер не поймет, какое значение выводить для группы.
+
+## Task 07 — GROUP BY + HAVING: фильтрация групп
+### SQL
+
+### Запрос
+```sql
+-- Отделы с > 2 сотрудниками
+SELECT DepartmentId, COUNT(*) AS EmpCount 
+FROM Employees 
+GROUP BY DepartmentId 
+HAVING COUNT(*) > 2;
+
+-- Отделы со средней зарплатой > 55000
+SELECT DepartmentId, ROUND(AVG(Salary), 2) AS AvgSal 
+FROM Employees 
+GROUP BY DepartmentId 
+HAVING AVG(Salary) > 55000;
+
+-- Отделы с суммарной зарплатой > 150000
+SELECT DepartmentId, SUM(Salary) AS TotalSal 
+FROM Employees 
+GROUP BY DepartmentId 
+HAVING SUM(Salary) > 150000;
+```
+### Результат
+
+![](./DataBase/level-1/Picture/Task07.png)
+
+### Вывод
+Ключевое отличие `HAVING` от `WHERE`: `WHERE` фильтрует отдельные строки *до* группировки, а `HAVING` фильтрует уже сформированные группы *после* агрегации. Попытка использовать `WHERE` с агрегатной функцией вызовет ошибку синтаксиса.
