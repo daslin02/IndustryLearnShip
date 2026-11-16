@@ -172,6 +172,7 @@
     <Content Include="DataBase\level-1\Picture\Task01.png" />
     <Content Include="DataBase\level-1\Task02_Insert.sql" />
     <Content Include="DataBase\level-1\Task03_Where.sql" />
+    <Content Include="DataBase\level-2\Picture\Task14.png" />
     <Content Include="DataBase\level-2\Picture\Task13.png" />
     <Content Include="DataBase\level-2\Picture\Task12.png" />
     <Content Include="DataBase\level-2\Picture\Task11.png" />

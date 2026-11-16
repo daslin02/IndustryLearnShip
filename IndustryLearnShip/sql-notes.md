@@ -294,3 +294,32 @@ FROM Employees e;
 
 ### Вывод
 Коррелированный подзапрос в `SELECT` выполняется для каждой строки внешнего запроса. Ссылка на внешний псевдоним `e.DepartmentId` внутри подзапроса связывает их. На больших таблицах такой подход может быть медленным из-за многократного выполнения подзапроса; в таких случаях эффективнее использовать `JOIN` с агрегированной производной таблицей или оконные функции.
+# Task 14 — EXISTS / NOT EXISTS
+### SQL
+
+### Запрос
+```sql
+-- Сотрудники, у которых есть хотя бы один проект
+SELECT EmployeeId, EmployeeName
+FROM Employees e
+WHERE EXISTS (
+    SELECT 1 
+    FROM EmployeeProjects ep 
+    WHERE ep.EmployeeId = e.EmployeeId
+);
+
+-- Сотрудники без проектов
+SELECT EmployeeId, EmployeeName
+FROM Employees e
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM EmployeeProjects ep 
+    WHERE ep.EmployeeId = e.EmployeeId
+);
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task14.png)
+
+### Вывод
+`EXISTS` проверяет наличие строк в подзапросе и останавливает сканирование при первом совпадении, что делает его эффективным для больших наборов данных. В отличие от `IN`, `EXISTS` корректно работает с `NULL` значениями. Результаты этих запросов должны полностью совпадать с результатами заданий 8 и 9, где использовались `JOIN`.
