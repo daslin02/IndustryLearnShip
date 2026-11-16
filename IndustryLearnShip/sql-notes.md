@@ -418,3 +418,35 @@ SELECT EmployeeId, EmployeeName, Salary FROM Employees WHERE EmployeeId = 1;
 
 ### Вывод
 Транзакция обеспечивает атомарность: либо все изменения сохраняются (`COMMIT`), либо ни одно (`ROLLBACK`). Внутри активной транзакции видны незафиксированные изменения только текущему соединению. `ROLLBACK` возвращает данные к состоянию на момент `BEGIN TRANSACTION`. Это фундаментальный механизм защиты целостности данных при сложных операциях.
+
+## Task 19 — Представления (VIEW)
+### SQL
+
+### Запрос
+```sql
+CREATE VIEW vw_EmployeeDetails AS
+SELECT 
+    e.EmployeeName,
+    d.DepartmentName,
+    p.ProjectName,
+    ep.Hours
+FROM Employees e
+INNER JOIN Departments d ON e.DepartmentId = d.DepartmentId
+INNER JOIN EmployeeProjects ep ON e.EmployeeId = ep.EmployeeId
+INNER JOIN Projects p ON ep.ProjectId = p.ProjectId;
+GO
+
+-- 2. Использование представления
+SELECT * FROM vw_EmployeeDetails ORDER BY DepartmentName, EmployeeName;
+GO
+
+-- 3. Удаление представления
+DROP VIEW IF EXISTS vw_EmployeeDetails;
+GO
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task19.png)
+
+### Вывод
+Представление (`VIEW`) — это сохраненный запрос, который выступает как виртуальная таблица. Оно не хранит данные физически, а выполняет underlying-запрос при каждом обращении. Преимущества: упрощение сложных запросов, централизация бизнес-логики, ограничение доступа к отдельным столбцам. Представление можно удалять и пересоздавать без потери исходных данных.
