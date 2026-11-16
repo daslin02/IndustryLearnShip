@@ -372,3 +372,24 @@ FROM Employees WHERE DepartmentId = 1 OR YEAR(HireDate) < 2022 OR EmployeeId = 4
 
 ### Вывод
 Перед любым `UPDATE` необходимо выполнять `SELECT` с тем же условием `WHERE`, чтобы убедиться, что затронуты только целевые строки. Отсутствие `WHERE` в `UPDATE` изменит ВСЕ строки таблицы — это одна из самых опасных ошибок. После изменения данных обязателен контрольный `SELECT` для подтверждения корректности.
+
+## Task 17 — DELETE: удаление данных
+### SQL
+
+### Запрос
+```sql
+-- Удаление назначений с Hours = 0
+DELETE FROM EmployeeProjects WHERE Hours = 0;
+SELECT COUNT(*) AS RemainingAssignments FROM EmployeeProjects;
+
+-- Удаление сотрудника (сначала убираем назначения из-за FK)
+DELETE FROM EmployeeProjects WHERE EmployeeId = 8;
+DELETE FROM Employees WHERE EmployeeId = 8;
+SELECT COUNT(*) AS RemainingEmployees FROM Employees;
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task17.png)
+
+### Вывод
+При удалении записей из родительской таблицы (`Employees`) сначала необходимо удалить зависимые записи в дочерних таблицах (`EmployeeProjects`), иначе нарушение внешнего ключа вызовет ошибку. Альтернатива — настроить каскадное удаление (`ON DELETE CASCADE`) при создании FK. Всегда проверяйте `COUNT(*)` после `DELETE` для контроля количества удаленных строк.
