@@ -344,3 +344,31 @@ SELECT EmployeeName, Salary, HireDate FROM Employees WHERE YEAR(HireDate) < 2022
 
 ### Вывод
 `UNION` автоматически удаляет дубликаты, выполняя дополнительную сортировку и сравнение, что требует ресурсов. `UNION ALL` просто объединяет результаты без проверки уникальности и работает значительно быстрее. Разница в количестве строк между двумя запросами показывает число сотрудников, которые одновременно имеют зарплату > 60000 И наняты до 2022 года.
+## Task 16 — UPDATE: изменение данных
+### SQL
+
+### Запрос
+```sql
+-- Проверка ДО обновления
+SELECT EmployeeId, EmployeeName, Salary, DepartmentId, HireDate 
+FROM Employees WHERE DepartmentId = 1 OR YEAR(HireDate) < 2022;
+
+-- Увеличение зарплаты на 10% для отдела 1
+UPDATE Employees SET Salary = Salary * 1.10 WHERE DepartmentId = 1;
+
+-- Увеличение зарплаты на 5000 для нанятых до 2022
+UPDATE Employees SET Salary = Salary + 5000 WHERE YEAR(HireDate) < 2022;
+
+-- Обновление даты найма одного сотрудника
+UPDATE Employees SET HireDate = '2023-01-01' WHERE EmployeeId = 4;
+
+-- Проверка ПОСЛЕ обновления
+SELECT EmployeeId, EmployeeName, Salary, DepartmentId, HireDate 
+FROM Employees WHERE DepartmentId = 1 OR YEAR(HireDate) < 2022 OR EmployeeId = 4;
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task16.png)
+
+### Вывод
+Перед любым `UPDATE` необходимо выполнять `SELECT` с тем же условием `WHERE`, чтобы убедиться, что затронуты только целевые строки. Отсутствие `WHERE` в `UPDATE` изменит ВСЕ строки таблицы — это одна из самых опасных ошибок. После изменения данных обязателен контрольный `SELECT` для подтверждения корректности.
