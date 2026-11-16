@@ -185,3 +185,23 @@ ORDER BY d.DepartmentName ASC, e.Salary DESC;
 
 ### Вывод
 `INNER JOIN` возвращает только те строки, для которых нашлось совпадение в обеих таблицах. Это базовый способ нормализации данных: мы храним ID отдела в таблице сотрудников, но для отчета подставляем текстовое название из справочника отделов.
+
+
+## Task 09 — LEFT JOIN: сотрудники без проектов
+### SQL
+
+### Запрос
+```sql
+SELECT 
+    e.EmployeeId,
+    e.EmployeeName
+FROM Employees e
+LEFT JOIN EmployeeProjects ep ON e.EmployeeId = ep.EmployeeId
+WHERE ep.EmployeeId IS NULL;
+```
+### Результат
+
+![](./DataBase/level-1/Picture/Task09.png)
+
+### Вывод
+`LEFT JOIN` сохраняет все строки из левой таблицы (`Employees`), даже если справа нет совпадений. В таких случаях столбцы правой таблицы заполняются `NULL`. Фильтрация по `IS NULL` — стандартный паттерн поиска "несуществующих связей" (анти-соединение).
