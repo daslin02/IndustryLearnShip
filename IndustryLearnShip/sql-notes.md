@@ -165,3 +165,23 @@ HAVING SUM(Salary) > 150000;
 
 ### Вывод
 Ключевое отличие `HAVING` от `WHERE`: `WHERE` фильтрует отдельные строки *до* группировки, а `HAVING` фильтрует уже сформированные группы *после* агрегации. Попытка использовать `WHERE` с агрегатной функцией вызовет ошибку синтаксиса.
+
+## Task 08 — INNER JOIN: сотрудники и отделы
+### SQL
+
+### Запрос
+```sql
+SELECT 
+    e.EmployeeName,
+    d.DepartmentName,
+    e.Salary
+FROM Employees e
+INNER JOIN Departments d ON e.DepartmentId = d.DepartmentId
+ORDER BY d.DepartmentName ASC, e.Salary DESC;
+```
+### Результат
+
+![](./DataBase/level-1/Picture/Task08.png)
+
+### Вывод
+`INNER JOIN` возвращает только те строки, для которых нашлось совпадение в обеих таблицах. Это базовый способ нормализации данных: мы храним ID отдела в таблице сотрудников, но для отчета подставляем текстовое название из справочника отделов.

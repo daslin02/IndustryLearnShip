@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\Init.sql" />
+    <Content Include="DataBase\level-1\Picture\Task08.png" />
     <Content Include="DataBase\level-1\Picture\Task07.png" />
     <Content Include="DataBase\level-1\Picture\Task06.png" />
     <Content Include="DataBase\level-1\Picture\Task05.png" />
