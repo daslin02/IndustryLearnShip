@@ -71,7 +71,6 @@ SELECT * FROM Employees WHERE Salary BETWEEN 40000 AND 60000;
 
 Всё понятно
 
-Вот продолжение вашего файла `sql-notes.md` с заданиями 4–10, оформленное в том же стиле и структуре. Я сохранил ваши пути к скриншотам и форматирование.
 
 
 ## Task 04 — ORDER BY + TOP: сортировка и лимит
@@ -95,3 +94,23 @@ ORDER BY DepartmentId ASC, Salary DESC;
 
 ### Вывод
 Оператор `TOP` удобно использовать для быстрого анализа лидеров или "старичков" компании. Важно помнить, что при сортировке по нескольким полям порядок указания столбцов в `ORDER BY` критически влияет на результат.
+## Task 05 — Агрегация: COUNT, SUM, AVG, MIN, MAX
+### SQL
+
+### Запрос
+```sql
+SELECT 
+    COUNT(*) AS TotalEmployees,
+    SUM(Salary) AS TotalSalary,
+    ROUND(AVG(Salary), 2) AS AvgSalary,
+    MIN(Salary) AS MinSalary,
+    MAX(Salary) AS MaxSalary,
+    COUNT(CASE WHEN Salary > 50000 THEN 1 END) AS HighSalaryCount
+FROM Employees;
+```
+### Результат
+
+![](./DataBase/level-1/Picture/Task05.png)
+
+### Вывод
+Агрегатные функции позволяют получить сводную статистику одним запросом. Функция `ROUND` необходима для корректного отображения средней зарплаты, так как `AVG` часто возвращает длинную дробную часть. Условный `COUNT` через `CASE` полезен для подсчета специфических групп без дополнительных фильтров.
