@@ -27,15 +27,17 @@ WHERE TABLE_TYPE = 'BASE TABLE';
 
 ### Запрос
 ```sql
-USE PracticeDB;
-GO
-SELECT TABLE_NAME 
-FROM INFORMATION_SCHEMA.TABLES 
-WHERE TABLE_TYPE = 'BASE TABLE';
+SELECT 'Departments' AS Table_Name, COUNT(*) AS Row_Count FROM Departments
+UNION ALL
+SELECT 'Employees', COUNT(*) FROM Employees
+UNION ALL
+SELECT 'Projects', COUNT(*) FROM Projects
+UNION ALL
+SELECT 'EmployeeProjects', COUNT(*) FROM EmployeeProjects;
 ```
 ### Результат
 
-![](./DataBase/level-1/Picture/Task01.png)
+![](./DataBase/level-1/Picture/Task02.png)
 
 ### Вывод
 
