@@ -205,3 +205,28 @@ WHERE ep.EmployeeId IS NULL;
 
 ### Вывод
 `LEFT JOIN` сохраняет все строки из левой таблицы (`Employees`), даже если справа нет совпадений. В таких случаях столбцы правой таблицы заполняются `NULL`. Фильтрация по `IS NULL` — стандартный паттерн поиска "несуществующих связей" (анти-соединение).
+
+
+## Task 10 — Множественный JOIN: полная картина
+### SQL
+
+### Запрос
+```sql
+SELECT 
+    e.EmployeeName,
+    d.DepartmentName,
+    p.ProjectName,
+    ep.Hours
+FROM Employees e
+INNER JOIN Departments d ON e.DepartmentId = d.DepartmentId
+INNER JOIN EmployeeProjects ep ON e.EmployeeId = ep.EmployeeId
+INNER JOIN Projects p ON ep.ProjectId = p.ProjectId
+ORDER BY d.DepartmentName, e.EmployeeName, p.ProjectName;
+```
+### Результат
+
+![](./DataBase/level-1/Picture/Task10.png)
+
+### Вывод
+При соединении 4 таблиц важно выстраивать цепочку связей логично: Сотрудники → Отделы (через DeptId), Сотрудники → Назначения (через EmpId), Назначения → Проекты (через ProjId). Псевдонимы таблиц (`e`, `d`, `p`, `ep`) делают запрос читаемым и сокращают код.
+```
