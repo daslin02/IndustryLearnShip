@@ -393,3 +393,28 @@ SELECT COUNT(*) AS RemainingEmployees FROM Employees;
 
 ### Вывод
 При удалении записей из родительской таблицы (`Employees`) сначала необходимо удалить зависимые записи в дочерних таблицах (`EmployeeProjects`), иначе нарушение внешнего ключа вызовет ошибку. Альтернатива — настроить каскадное удаление (`ON DELETE CASCADE`) при создании FK. Всегда проверяйте `COUNT(*)` после `DELETE` для контроля количества удаленных строк.
+## Task 18 — Транзакции: BEGIN TRAN / COMMIT / ROLLBACK
+### SQL
+
+### Запрос
+```sql
+-- Демонстрация ROLLBACK
+BEGIN TRANSACTION;
+UPDATE Employees SET Salary = 999999 WHERE EmployeeId = 1;
+SELECT EmployeeId, EmployeeName, Salary FROM Employees WHERE EmployeeId = 1;
+ROLLBACK;
+SELECT EmployeeId, EmployeeName, Salary FROM Employees WHERE EmployeeId = 1;
+
+-- Демонстрация COMMIT
+BEGIN TRANSACTION;
+UPDATE Employees SET Salary = 70000 WHERE EmployeeId = 1;
+SELECT EmployeeId, EmployeeName, Salary FROM Employees WHERE EmployeeId = 1;
+COMMIT;
+SELECT EmployeeId, EmployeeName, Salary FROM Employees WHERE EmployeeId = 1;
+```
+### Результат
+
+![](./DataBase/level-2/Picture/Task18.png)
+
+### Вывод
+Транзакция обеспечивает атомарность: либо все изменения сохраняются (`COMMIT`), либо ни одно (`ROLLBACK`). Внутри активной транзакции видны незафиксированные изменения только текущему соединению. `ROLLBACK` возвращает данные к состоянию на момент `BEGIN TRANSACTION`. Это фундаментальный механизм защиты целостности данных при сложных операциях.
