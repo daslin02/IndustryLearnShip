@@ -480,3 +480,52 @@ SET STATISTICS IO OFF;
 
 ### Вывод
 Индексы ускоряют поиск ценой замедления операций записи (`INSERT/UPDATE/DELETE`) и расхода дискового пространства. `SET STATISTICS IO ON` показывает количество логических чтений страниц: чем меньше значение, тем эффективнее запрос. Составной индекс `(DepartmentId, Salary)` был бы еще эффективнее для данного запроса, так как покрывает оба условия фильтрации одним поиском.
+## Task 21 — Хранимые процедуры
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+-- Процедура: сотрудники по отделу (CREATE PROCEDURE — первый оператор пакета, нужен GO)
+CREATE PROCEDURE sp_GetEmployeesByDepartment
+    @DeptId INT
+AS
+BEGIN
+    SELECT EmployeeName, Salary, HireDate
+    FROM Employees
+    WHERE DepartmentId = @DeptId;
+END;
+GO
+
+EXEC sp_GetEmployeesByDepartment @DeptId = 1;
+GO
+
+-- Процедура с OUTPUT-параметром: средняя зарплата отдела
+CREATE PROCEDURE sp_GetAvgSalaryByDept
+    @DeptId INT,
+    @AvgSalary DECIMAL(10,2) OUTPUT
+AS
+BEGIN
+    SELECT @AvgSalary = AVG(Salary)
+    FROM Employees
+    WHERE DepartmentId = @DeptId;
+END;
+GO
+
+DECLARE @Result DECIMAL(10,2);
+EXEC sp_GetAvgSalaryByDept @DeptId = 1, @AvgSalary = @Result OUTPUT;
+SELECT @Result AS AvgSalary;
+GO
+
+-- Очистка
+DROP PROCEDURE IF EXISTS sp_GetEmployeesByDepartment;
+DROP PROCEDURE IF EXISTS sp_GetAvgSalaryByDept;
+GO
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task21.png)
+
+### Вывод
+Хранимые процедуры инкапсулируют логику на стороне сервера. Параметры защищают от SQL-инъекций и делают код переиспользуемым. `OUTPUT`-параметр удобен для возврата единичного значения без результирующего набора. Как и `CREATE VIEW`, `CREATE PROCEDURE` должен быть первым оператором пакета — нужен `GO`.
