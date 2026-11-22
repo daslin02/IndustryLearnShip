@@ -576,3 +576,26 @@ GO
 
 ### Вывод
 Скалярная функция возвращает одно значение и вызывается в `SELECT`, табличная возвращает набор строк и используется в `FROM`. В отличие от представления, функция принимает параметры. Пользовательские скалярные функции обязательно вызываются с указанием схемы (`dbo.`), иначе SQL Server выдаёт ошибку.
+## Task 23 — Оконные функции: ROW_NUMBER, RANK, DENSE_RANK
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+SELECT 
+    EmployeeName,
+    DepartmentId,
+    Salary,
+    ROW_NUMBER() OVER (ORDER BY Salary DESC) AS RowNum,
+    RANK() OVER (PARTITION BY DepartmentId ORDER BY Salary DESC) AS DeptRank,
+    DENSE_RANK() OVER (PARTITION BY DepartmentId ORDER BY Salary DESC) AS DeptDenseRank
+FROM Employees
+ORDER BY DepartmentId, Salary DESC;
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task23.png)
+
+### Вывод
+Оконные функции вычисляют значения для каждой строки относительно окна строк, не сворачивая результат как `GROUP BY`. `ROW_NUMBER` даёт уникальный номер (1,2,3...), `RANK` — ранг с пропусками при равных значениях (1,1,3...), `DENSE_RANK` — без пропусков (1,1,2...). `PARTITION BY` сбрасывает нумерацию для каждого отдела.
