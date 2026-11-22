@@ -622,3 +622,44 @@ ORDER BY DepartmentId;
 
 ### Вывод
 Оконные агрегаты добавляют к каждой детальной строке сводные значения по её группе за один проход по таблице. Итоги по отделам совпадают с результатами `GROUP BY` из задания 6, но все исходные строки сохраняются. Столбец `DiffFromAvg` показывает отклонение зарплаты от средней по отделу.
+
+## Task 25 — CTE (Common Table Expressions)
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+-- Задание 12 через CTE: сотрудники выше средней
+WITH AvgSalaryCTE AS (
+    SELECT AVG(Salary) AS AvgSal FROM Employees
+)
+SELECT e.EmployeeName, e.Salary
+FROM Employees e
+CROSS JOIN AvgSalaryCTE
+WHERE e.Salary > AvgSalaryCTE.AvgSal;
+
+-- Топ-3 отделов по средней зарплате через цепочку CTE
+WITH DeptStats AS (
+    SELECT 
+        DepartmentId,
+        ROUND(AVG(Salary), 2) AS AvgSal
+    FROM Employees
+    GROUP BY DepartmentId
+),
+TopDepts AS (
+    SELECT TOP 3 DepartmentId, AvgSal
+    FROM DeptStats
+    ORDER BY AvgSal DESC
+)
+SELECT d.DepartmentName, td.AvgSal
+FROM TopDepts td
+INNER JOIN Departments d ON td.DepartmentId = d.DepartmentId;
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task25.png)
+
+### Вывод
+CTE (`WITH`) разбивает сложный запрос на именованные логические шаги и улучшает читаемость по сравнению с вложенными подзапросами. Результат первой версии полностью совпадает с заданием 12. Цепочка CTE для топ-3 отделов читается сверху вниз как последовательность вычислений.
+
