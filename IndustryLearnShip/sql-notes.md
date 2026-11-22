@@ -599,3 +599,26 @@ ORDER BY DepartmentId, Salary DESC;
 
 ### Вывод
 Оконные функции вычисляют значения для каждой строки относительно окна строк, не сворачивая результат как `GROUP BY`. `ROW_NUMBER` даёт уникальный номер (1,2,3...), `RANK` — ранг с пропусками при равных значениях (1,1,3...), `DENSE_RANK` — без пропусков (1,1,2...). `PARTITION BY` сбрасывает нумерацию для каждого отдела.
+## Task 24 — Оконные агрегаты: SUM OVER, AVG OVER
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+SELECT 
+    EmployeeName,
+    DepartmentId,
+    Salary,
+    SUM(Salary) OVER (PARTITION BY DepartmentId) AS DeptTotalSalary,
+    ROUND(AVG(Salary) OVER (PARTITION BY DepartmentId), 2) AS DeptAvgSalary,
+    ROUND(Salary - AVG(Salary) OVER (PARTITION BY DepartmentId), 2) AS DiffFromAvg
+FROM Employees
+ORDER BY DepartmentId;
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task24.png)
+
+### Вывод
+Оконные агрегаты добавляют к каждой детальной строке сводные значения по её группе за один проход по таблице. Итоги по отделам совпадают с результатами `GROUP BY` из задания 6, но все исходные строки сохраняются. Столбец `DiffFromAvg` показывает отклонение зарплаты от средней по отделу.
