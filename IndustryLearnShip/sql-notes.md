@@ -663,3 +663,32 @@ INNER JOIN Departments d ON td.DepartmentId = d.DepartmentId;
 ### Вывод
 CTE (`WITH`) разбивает сложный запрос на именованные логические шаги и улучшает читаемость по сравнению с вложенными подзапросами. Результат первой версии полностью совпадает с заданием 12. Цепочка CTE для топ-3 отделов читается сверху вниз как последовательность вычислений.
 
+## Task 26 — CASE: условная логика в SELECT
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+SELECT 
+    EmployeeName,
+    Salary,
+    CASE 
+        WHEN Salary > 60000 THEN 'High'
+        WHEN Salary >= 40000 THEN 'Medium'
+        ELSE 'Low'
+    END AS SalaryLevel,
+    HireDate,
+    CASE 
+        WHEN HireDate < '2020-01-01' THEN 'Senior'
+        WHEN HireDate <= '2022-12-31' THEN 'Mid'
+        ELSE 'Junior'
+    END AS Tenure
+FROM Employees;
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task26.png)
+
+### Вывод
+`CASE` реализует ветвление прямо в `SELECT`, создавая вычисляемые категории без изменения схемы. Условия проверяются сверху вниз до первого совпадения, поэтому порядок важен: сначала `> 60000`, затем `>= 40000`. Это аналог `if-else` из языков программирования.
