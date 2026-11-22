@@ -529,3 +529,50 @@ GO
 
 ### Вывод
 Хранимые процедуры инкапсулируют логику на стороне сервера. Параметры защищают от SQL-инъекций и делают код переиспользуемым. `OUTPUT`-параметр удобен для возврата единичного значения без результирующего набора. Как и `CREATE VIEW`, `CREATE PROCEDURE` должен быть первым оператором пакета — нужен `GO`.
+
+## Task 22 — Функции: скалярная и табличная
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+-- Скалярная функция: годовая зарплата
+CREATE FUNCTION fn_GetAnnualSalary(@MonthlySalary DECIMAL(10,2))
+RETURNS DECIMAL(12,2)
+AS
+BEGIN
+    RETURN @MonthlySalary * 12;
+END;
+GO
+
+-- Табличная функция: сотрудники в диапазоне зарплат
+CREATE FUNCTION fn_GetEmployeesBySalaryRange(@Min DECIMAL(10,2), @Max DECIMAL(10,2))
+RETURNS TABLE
+AS
+RETURN (
+    SELECT EmployeeName, Salary, DepartmentId
+    FROM Employees
+    WHERE Salary BETWEEN @Min AND @Max
+);
+GO
+
+-- Скалярная — в SELECT (обязателен префикс схемы dbo)
+SELECT EmployeeName, dbo.fn_GetAnnualSalary(Salary) AS AnnualSalary
+FROM Employees;
+
+-- Табличная — в FROM
+SELECT * FROM dbo.fn_GetEmployeesBySalaryRange(50000, 70000);
+GO
+
+-- Очистка
+DROP FUNCTION IF EXISTS fn_GetAnnualSalary;
+DROP FUNCTION IF EXISTS fn_GetEmployeesBySalaryRange;
+GO
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task22.png)
+
+### Вывод
+Скалярная функция возвращает одно значение и вызывается в `SELECT`, табличная возвращает набор строк и используется в `FROM`. В отличие от представления, функция принимает параметры. Пользовательские скалярные функции обязательно вызываются с указанием схемы (`dbo.`), иначе SQL Server выдаёт ошибку.
