@@ -692,3 +692,25 @@ FROM Employees;
 
 ### Вывод
 `CASE` реализует ветвление прямо в `SELECT`, создавая вычисляемые категории без изменения схемы. Условия проверяются сверху вниз до первого совпадения, поэтому порядок важен: сначала `> 60000`, затем `>= 40000`. Это аналог `if-else` из языков программирования.
+## Task 27 — Работа с датами: DATEADD, DATEDIFF, FORMAT
+### SQL
+
+### Запрос
+```sql
+USE PracticeDB;
+GO
+SELECT 
+    EmployeeName,
+    HireDate,
+    DATEDIFF(YEAR, HireDate, GETDATE()) AS YearsOfService,
+    DATEDIFF(MONTH, HireDate, GETDATE()) AS MonthsOfService,
+    DATEADD(YEAR, 1, HireDate) AS OneYearAnniversary,
+    FORMAT(HireDate, 'dd.MM.yyyy') AS FormattedHireDate
+FROM Employees;
+```
+### Результат
+
+![](./DataBase/level-3/Picture/Task27.png)
+
+### Вывод
+`DATEDIFF` считает разницу дат в указанных единицах, `DATEADD` добавляет интервал к дате, `FORMAT` приводит дату к строке нужного вида. Нюанс: `DATEDIFF(YEAR, ...)` считает переходы через границу года, а не полные годы стажа. `FORMAT` удобнее, но медленнее `CONVERT` на больших выборках.
