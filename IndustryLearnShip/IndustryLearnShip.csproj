@@ -82,10 +82,14 @@
     <Compile Include="Common\IShape.cs" />
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
+    <Compile Include="DataBase\Level-3\Task28_DbSelect.cs" />
+    <Compile Include="DataBase\Level-3\Task29_DbInsert.cs" />
+    <Compile Include="DataBase\Level-3\Task30_DbReport.cs" />
     <Compile Include="Enums\CustomDayOfWeek.cs" />
     <Compile Include="Enums\NotificationType.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Helpers\CustomArray.cs" />
+    <Compile Include="Helpers\DbHelper.cs" />
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
     <Compile Include="Models\Animal.cs" />
@@ -158,6 +162,9 @@
     <None Include="sql-notes.md" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="connection.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="DataBase\Init.sql" />
     <Content Include="DataBase\level-1\Picture\Task10.png" />
     <Content Include="DataBase\level-1\Picture\Task09.png" />
